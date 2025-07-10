@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MapLibre City Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="modalStyles.css">
+</head>
+<body>
+  <div id="header">
+    <h1>+5 million per city</h1>
+  </div>
+
+  <div id="map"></div>
+
+  <div id="navbar">
+    <div class="nav-item" id="support" onclick="openModal('supportModal')">
+      <div>
+        <img src="assets/icons/kofi.png" alt="" srcset="">
+        <h3>Support</h3>
+      </div>
+    </div>
+    <div class="nav-item" id="info" onclick="openModal('infoModal')">
+      <div>
+        <img src="assets/icons/full_screen.png" alt="" srcset="">
+        <h3>Info</h3>
+      </div>
+    </div>
+    <div class="nav-item" id="ranking" onclick="openModal('rankingModal')">
+      <div>
+        <img src="assets/icons/full_screen.png" alt="" srcset="">
+        <h3>Ranking</h3>
+      </div>
+    </div>
+    <div class="nav-item" id="fullscreen" onclick="requestFullScreen()">
+      <div>
+          <img src="assets/icons/full_screen.png" style="height: 30px;" id="fullscreen-icon" alt="Full Screen">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SupportModal start -->
+   <div id="supportModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('supportModal')">&times;</span>
+      <h2>Support me.</h2>
+      <div class="profile">
+            <!-- <img src="images/portrait-ps_400x400.jpg" alt="Profile Picture"> -->
+            <p>
+                I love creating maps.
+            </p>
+            <p>
+                I'm currently having various map ideas on my mind which I will be creating in future. You can take a look of my projects at: <a href="https://markomaps.netlify.app" target="_blank" style="color: #4088c8;">www.markomaps.com</a> 
+            </p>
+            <p>If you'd like to support me, here's how:</p>
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#508043', 'V7V51G8LBE');kofiwidget2.draw();</script> 
+        </div>
+
+        <div class="thanks">
+            <p>If you really liked this map, you can support me and buy your name for the supporter list below!</p>    
+            
+              <a href="https://ko-fi.com/s/4906e5c9cd0" target="_blank" rel="noopener noreferrer">
+            <button id="supportListBtn">
+              🛍️ Buy your name for the list below ↓↓↓
+            </button></a>
+            
+            <h3>Thanks for the support! 🙏</h3>
+            <ul id="supporterList">
+            <li>"Supporter1"</li>
+            <li>"Supporter2"</li>
+            <!-- Add more manually -->
+            </ul>
+        </div>
+    </div>
+   </div>
+  <!-- SupportModal END -->
+
+  <!-- InfoModal start -->
+   <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('infoModal')">&times;</span>
+      <h2>Info</h2>
+      <p>This map shows the cities where lives more than 5 000 000 people (2025).</p>
+
+      <h3>Source of data:</h3>
+      <p>Link to source:</p>
+
+      <h3>Other credits:</h3>
+      <ul>
+        <li>MapTiler for basemap.</li>
+        <li>QGIS and OSM for geocoding.</li>
+      </ul>
+    </div>
+   </div>
+  <!-- InfoModal END -->
+
+  <!-- RankingModal start -->
+   <div id="rankingModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('rankingModal')">&times;</span>
+      <h2>Ranking</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse alias delectus aliquam recusandae ullam. Pariatur cumque quasi, quo tenetur quas ea? Commodi molestiae consequuntur consequatur vitae explicabo. Quaerat, nostrum repudiandae?</p>
+    </div>
+   </div>
+  <!-- RankingModal END -->
+
+  <script src="map.js"></script>
+
+  <!-- Util scripts -->
+   <script src="utils/viewModal.js"></script>
+   <script src="utils/fullScreen.js"></script>
+</body>
+</html>
