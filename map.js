@@ -10,8 +10,28 @@ const map = new maplibregl.Map({
       zoom: 1.5,
       minZoom: 0.3,
       maxZoom: 5,
+      projection: 'globe',
       maxBounds: bounds,
       attributionControl: true
+});
+
+let currentProjection = 'globe';
+
+const toggleBtn = document.getElementById('toggleProjectionBtn');
+toggleBtn.textContent = '🗺️'
+
+toggleBtn.addEventListener('click', () => {
+  if (currentProjection === 'globe') {
+    map.setProjection('mercator');
+    toggleBtn.textContent = '🌐'; // or "2D"
+    toggleBtn.title = 'Switch to Globe';
+    currentProjection = 'mercator';
+  } else {
+    map.setProjection({ type: 'globe' });
+    toggleBtn.textContent = '🗺️'; // or "3D"
+    toggleBtn.title = 'Switch to Mercator';
+    currentProjection = 'globe';
+  }
 });
 
 map.dragRotate.disable();
@@ -37,7 +57,7 @@ map.on('load', () => {
       source: 'cities',
       paint: {
         'circle-radius': 8,
-        'circle-color': '#ff3838',
+        'circle-color': '#28a44d', //#ff3838
         'circle-stroke-width': 2,
         'circle-stroke-color': '#fff'
       }
@@ -51,16 +71,16 @@ map.on('load', () => {
       layout: {
         'text-field': ['get', 'city'],
         'text-font': ['Open Sans Regular'],
-        'text-size': 12,
-        'text-offset': [0, -2.5],
+        'text-size': 16,
+        'text-offset': [0, -2],
         'text-anchor': 'top'
       },
       paint: {
         'text-color': '#ffffff',
-        'text-halo-color': '#2f4f4f',
+        'text-halo-color': '#28a44d',
         'text-halo-width': 1
       },
-      minzoom: 3.5
+      minzoom: 2
     });
 
     map.on('click', 'cities-layer', (e) => {

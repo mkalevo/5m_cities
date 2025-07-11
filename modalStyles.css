@@ -55,3 +55,27 @@
 #supportListBtn:hover {
     background-color: #1a3122;
 }
+
+
+#countries_ranking_list {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#countries_ranking_list td, #countries_ranking_list th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#countries_ranking_list tr:nth-child(even){background-color: #f2f2f2;}
+
+#countries_ranking_list tr:hover {background-color: #ddd;}
+
+#countries_ranking_list th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #28a44d;
+  color: white;
+}

@@ -12,7 +12,11 @@
 </head>
 <body>
   <div id="header">
+    <div id="projectionControl">
+      <button id="toggleProjectionBtn" title="Switch projection"></button>
+    </div>
     <h1>+5 million per city</h1>
+    <div></div>
   </div>
 
   <div id="map"></div>
@@ -26,13 +30,13 @@
     </div>
     <div class="nav-item" id="info" onclick="openModal('infoModal')">
       <div>
-        <img src="assets/icons/full_screen.png" alt="" srcset="">
+        <img src="assets/icons/info.png" alt="" srcset="">
         <h3>Info</h3>
       </div>
     </div>
     <div class="nav-item" id="ranking" onclick="openModal('rankingModal')">
       <div>
-        <img src="assets/icons/full_screen.png" alt="" srcset="">
+        <img src="assets/icons/ranking.png" alt="" srcset="">
         <h3>Ranking</h3>
       </div>
     </div>
@@ -103,8 +107,10 @@
    <div id="rankingModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('rankingModal')">&times;</span>
-      <h2>Ranking</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse alias delectus aliquam recusandae ullam. Pariatur cumque quasi, quo tenetur quas ea? Commodi molestiae consequuntur consequatur vitae explicabo. Quaerat, nostrum repudiandae?</p>
+      <h2>By country</h2>
+      <p>There is total of 87 cities with more than 5 million people.</p>
+      <p>How many cities of more than 5 000 000 each country has:</p>
+      <div id="countries_ranking_list"></div>
     </div>
    </div>
   <!-- RankingModal END -->
@@ -114,5 +120,6 @@
   <!-- Util scripts -->
    <script src="utils/viewModal.js"></script>
    <script src="utils/fullScreen.js"></script>
+   <script src="utils/countries_ranking.js"></script> <!-- table to ranking modal -->
 </body>
 </html>
