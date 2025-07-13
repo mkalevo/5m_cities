@@ -15,8 +15,13 @@
     <div id="projectionControl">
       <button id="toggleProjectionBtn" title="Switch projection"></button>
     </div>
-    <h1>+5 million per city</h1>
-    <div></div>
+    <div id="headerTitle">
+      <h1>+5 million per city</h1>
+      <h2>(and their growth)</h2>
+    </div>
+    <div>
+      <p><span style="color:#212121; font-weight: bold;">2025</span></p>
+    </div>
   </div>
 
   <div id="map"></div>
@@ -52,34 +57,31 @@
    <div id="supportModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('supportModal')">&times;</span>
-      <h2>Support me.</h2>
+      <h2>I love creating maps.</h2>
       <div class="profile">
-            <!-- <img src="images/portrait-ps_400x400.jpg" alt="Profile Picture"> -->
-            <p>
-                I love creating maps.
-            </p>
-            <p>
-                I'm currently having various map ideas on my mind which I will be creating in future. You can take a look of my projects at: <a href="https://markomaps.netlify.app" target="_blank" style="color: #4088c8;">www.markomaps.com</a> 
-            </p>
-            <p>If you'd like to support me, here's how:</p>
-            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#508043', 'V7V51G8LBE');kofiwidget2.draw();</script> 
-        </div>
+        <p>You can take a look of my projects at: <a href="https://markomaps.netlify.app" target="_blank" style="color: #4088c8;">www.markomaps.com</a></p>
+        <p>
+            I'm currently having various map ideas which I will be creating in future. If you have any ideas, don't hesitate to contact me. You can find my social media accounts from my homesite or Ko-fi page.
+        </p>
+        <p>If you'd like to support me, here's how:</p>
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#508043', 'V7V51G8LBE');kofiwidget2.draw();</script> 
+      </div>
 
-        <div class="thanks">
-            <p>If you really liked this map, you can support me and buy your name for the supporter list below!</p>    
-            
-              <a href="https://ko-fi.com/s/4906e5c9cd0" target="_blank" rel="noopener noreferrer">
-            <button id="supportListBtn">
-              🛍️ Buy your name for the list below ↓↓↓
-            </button></a>
-            
-            <h3>Thanks for the support! 🙏</h3>
-            <ul id="supporterList">
-            <li>"Supporter1"</li>
-            <li>"Supporter2"</li>
-            <!-- Add more manually -->
-            </ul>
-        </div>
+      <div class="thanks">
+          <p>If you really liked this map, you can support me and buy your name for the supporter list below!</p>    
+          
+            <a href="https://ko-fi.com/s/4906e5c9cd0" target="_blank" rel="noopener noreferrer">
+          <button id="supportListBtn">
+            🛍️ Buy your name for the list below ↓↓↓
+          </button></a>
+          
+          <h3>Thanks for the support! 🙏</h3>
+          <ul id="supporterList">
+          <li>"Supporter1"</li>
+          <li>"Supporter2"</li>
+          <!-- Add more manually -->
+          </ul>
+      </div>
     </div>
    </div>
   <!-- SupportModal END -->
@@ -90,15 +92,10 @@
       <span class="close" onclick="closeModal('infoModal')">&times;</span>
       <h2>Info</h2>
       <p>This map shows the cities where lives more than 5 000 000 people (2025).</p>
+      <p>The growth between 2024 -> 2025 is visualized with green and red colors.</p>
 
       <h3>Source of data:</h3>
-      <p>Link to source:</p>
-
-      <h3>Other credits:</h3>
-      <ul>
-        <li>MapTiler for basemap.</li>
-        <li>QGIS and OSM for geocoding.</li>
-      </ul>
+      <p><i>Largest Cities by Population 2025. (2025-07-12). World Population Review. </i>https://worldpopulationreview.com/cities</p>
     </div>
    </div>
   <!-- InfoModal END -->
