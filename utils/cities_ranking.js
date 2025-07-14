@@ -31,9 +31,9 @@ function createSortableCityTable(geojson) {
         <tr>
           <th>#</th>
           <th>City</th>
-          <th class="sortable" data-key="population">Population <span class="sort-icon">⬍</span></th>
-          <th class="sortable" data-key="growthRate">Growth <span class="sort-icon">⬍</span></th>
-          <th class="sortable" data-key="growthAmount">Growth <span class="sort-icon">⬍</span></th>
+          <th class="sortable" data-key="population"><span class="sort-icon">⬍</span>Population</th>
+          <th class="sortable" data-key="growthRate"><span class="sort-icon">⬍</span>%</th>
+          <th class="sortable" data-key="growthAmount"><span class="sort-icon">⬍</span>Growth</th>
         </tr>
       </thead>
     `;

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>MapLibre City Map</title>
+  <title>5m Population Cities</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <link rel="shortcut icon" href="assets/logo/markomaps_fav_16.png" type="image/x-icon">
   <script src="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.js"></script>
   <link href="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
@@ -65,20 +65,22 @@
       <span class="close" onclick="closeModal('supportModal')">&times;</span>
       <h2>I love creating maps.</h2>
       <div class="profile">
-        <p>You can take a look of my projects at: <a href="https://markomaps.netlify.app" target="_blank" style="color: #4088c8;">www.markomaps.com</a></p>
+        <p>You can check out my projects at: <a href="https://markomaps.com" target="_blank" style="color: #4088c8;">www.markomaps.com</a></p>
         <p>
-            I'm currently having various map ideas which I will be creating in future. If you have any ideas, don't hesitate to contact me. You can find my social media accounts from my homesite or Ko-fi page.
+          I'm currently working on various map ideas that I'll be creating in the future.
+          If you have any suggestions, or ideas for map projects, don't hesitate to contact me!
+          You can find my social media accounts on my homepage or Ko-fi page.
         </p>
         <p>If you'd like to support me, here's how:</p>
         <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#508043', 'V7V51G8LBE');kofiwidget2.draw();</script> 
       </div>
 
       <div class="thanks">
-          <p>If you really liked this map, you can support me and buy your name for the supporter list below!</p>    
+          <p>If you really liked this map, you can support me and buy your name onto the supporter list below!</p>     
           
             <a href="https://ko-fi.com/s/4906e5c9cd0" target="_blank" rel="noopener noreferrer">
           <button id="supportListBtn">
-            🛍️ Buy your name for the list below ↓↓↓
+             🛍️ Add your name to the list ↓↓↓
           </button></a>
           
           <h3>Thanks for the support! 🙏</h3>
@@ -97,12 +99,12 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('infoModal')">&times;</span>
       <h2>Info</h2>
-      <p>This map shows the cities where populates more than 5 000 000 people (2025).</p>
-      <p>The growth between 2024 -> 2025 is visualized with green and red colors.</p>
+      <p>This map shows cities with more than 5,000,000 people (in 2025).</p>
+      <p>Population growth between 2024 and 2025 is visualized using green and red colors.</p>
 
-      <h3>About the measuring</h3>
+      <h3>About the measurement</h3>
       <p>
-        The largest cities in the world, ranked by population, are typically measured by their metropolitan area, which includes the city and surrounding areas that are economically and socially integrated. 
+        The largest cities in the world, ranked by population, are typically measured by their metropolitan area, which includes the city itself and surrounding areas that are economically and socially integrated.
       </p>
 
       <h3>Source of data:</h3>
@@ -115,9 +117,9 @@
    <div id="rankingModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('rankingModal')">&times;</span>
-      <h2>By country</h2>
-      <p>There is total of 87 cities with more than 5 million people.</p>
-      <p>How many cities of more than 5 000 000 each country has:</p>
+    <h2>By Country</h2>
+    <p>There are a total of 87 cities with more than 5 million people.</p>
+    <p>Number of cities with over 5,000,000 people per country:</p>
       <div id="countries_ranking_list" class="modalTable"></div>
     </div>
    </div>
@@ -127,8 +129,9 @@
    <div id="rankingCityModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('rankingCityModal')">&times;</span>
-      <h2>By City</h2>
-      <p>There is total of 87 cities with more than 5 million people.</p>
+    <h2>By City</h2>
+    <p>List of cities with more than 5,000,000 people in 2025.</p>
+    <p>Growth % and amount are compared to the previous year (2024).</p>
       <!-- <div id="cities_ranking_list"></div> -->
       <div id="cities_table" class="modalTable" style="max-height: 400px; overflow-y: auto;"></div>
     </div>
