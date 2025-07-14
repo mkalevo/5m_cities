@@ -133,6 +133,7 @@ map.on('load', () => {
       const pop2024 = Number(props.pop2024).toLocaleString();
       const pop2025 = Number(props.pop2025).toLocaleString();
       const growth = (parseFloat(props.growthRate) * 100).toFixed(2);
+      const rank = props.rank
 
       const growthText = growth > 0 ? `🔼 ${growth}%` : `🔽 ${Math.abs(growth)}%`;
       const growthColor = growth > 0 ? 'green' : 'red';
@@ -141,7 +142,7 @@ map.on('load', () => {
 
       popupHTML = `
     <div style="font-family: sans-serif; min-width: 200px;">
-      <h3 style="margin: 0 0 5px; font-size: 18px;">${city}</h3>
+      <h3 style="margin: 0 0 5px; font-size: 18px;">${city} #${rank}</h3>
       <p style="margin: 0 0 4px;">
         <strong>${flag} ${country}</strong>
       </p>

@@ -39,10 +39,16 @@
         <h3>Info</h3>
       </div>
     </div>
+    <div class="nav-item" id="ranking_city" onclick="openModal('rankingCityModal')">
+      <div>
+        <img src="assets/icons/ranking.png" alt="" srcset="">
+        <h3>By City</h3>
+      </div>
+    </div>
     <div class="nav-item" id="ranking" onclick="openModal('rankingModal')">
       <div>
         <img src="assets/icons/ranking.png" alt="" srcset="">
-        <h3>Ranking</h3>
+        <h3>By Country</h3>
       </div>
     </div>
     <div class="nav-item" id="fullscreen" onclick="requestFullScreen()">
@@ -91,8 +97,13 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('infoModal')">&times;</span>
       <h2>Info</h2>
-      <p>This map shows the cities where lives more than 5 000 000 people (2025).</p>
+      <p>This map shows the cities where populates more than 5 000 000 people (2025).</p>
       <p>The growth between 2024 -> 2025 is visualized with green and red colors.</p>
+
+      <h3>About the measuring</h3>
+      <p>
+        The largest cities in the world, ranked by population, are typically measured by their metropolitan area, which includes the city and surrounding areas that are economically and socially integrated. 
+      </p>
 
       <h3>Source of data:</h3>
       <p><i>Largest Cities by Population 2025. (2025-07-12). World Population Review. </i>https://worldpopulationreview.com/cities</p>
@@ -112,11 +123,24 @@
    </div>
   <!-- RankingModal END -->
 
+   <!-- RankingModal start -->
+   <div id="rankingCityModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('rankingCityModal')">&times;</span>
+      <h2>By City</h2>
+      <p>There is total of 87 cities with more than 5 million people.</p>
+      <p>How many cities of more than 5 000 000 each country has:</p>
+      <div id="cities_ranking_list"></div>
+    </div>
+   </div>
+  <!-- RankingModal END -->
+
   <script src="map.js"></script>
 
   <!-- Util scripts -->
    <script src="utils/viewModal.js"></script>
    <script src="utils/fullScreen.js"></script>
-   <script src="utils/countries_ranking.js"></script> <!-- table to ranking modal -->
+   <script src="utils/countries_ranking.js"></script>
+   <script src="utils/cities_ranking.js"></script>
 </body>
 </html>
