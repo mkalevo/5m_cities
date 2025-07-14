@@ -142,7 +142,7 @@ map.on('load', () => {
 
       popupHTML = `
     <div style="font-family: sans-serif; min-width: 200px;">
-      <h3 style="margin: 0 0 5px; font-size: 18px;">${city} #${rank}</h3>
+      <h3 style="margin: 0 0 5px; font-size: 18px;">${city} <span style='font-weight: 500; color: gris; font-size: 1.rem'>#${rank}</span></h3>
       <p style="margin: 0 0 4px;">
         <strong>${flag} ${country}</strong>
       </p>

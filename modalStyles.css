@@ -57,25 +57,58 @@
 }
 
 
-#countries_ranking_list {
+.modalTable {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
-#countries_ranking_list td, #countries_ranking_list th {
+.modalTable td, th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#countries_ranking_list tr:nth-child(even){background-color: #f2f2f2;}
+.modalTable tr:nth-child(even){background-color: #f2f2f2;}
 
-#countries_ranking_list tr:hover {background-color: #ddd;}
+.modalTable tr:hover {background-color: #ddd;}
 
-#countries_ranking_list th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+.modalTable th {
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: left;
-  background-color: #28a44d;
+  background-color: #2f4f4f;
   color: white;
+}
+
+.sort-icon {
+  background-color: #292929;
+  color: #ffffff;
+  font-size: 0.9em;
+  padding: 2px 4px;
+  margin-left: 4px;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+th.sortable:hover .sort-icon {
+  background-color: #5a5a5a;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+
+  #cities_table th {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  #cities_table td{
+    font-size: 0.7rem;
+    padding: 8px 0px 8px 4px;
+  }
+
+  #cities_table #growthIcon {
+    display: none;
+  }
 }
