@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base href="/cities5m/">
+  <!-- Script below creates this element <base href="/cities5m/"> -->
+  <!-- It's used for subdirecting the site from the mainsite. In other cases base isn't used as it's not necessary. -->
+  <script>
+    if (location.hostname.includes("markomaps")) {
+      const base = document.createElement("base");
+      base.href = "/cities5m/";
+      document.head.appendChild(base);
+    }
+  </script>
+  <!-- Script end -->
+
   <meta charset="utf-8" />
   <title>5m Population Cities</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -138,12 +148,6 @@
     </div>
    </div>
   <!-- RankingModal END -->
-
-
-    <!-- Set Worker URL (used for redirecting) 
-    <script>
-      maplibregl.setWorkerUrl('https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.worker.js');
-    </script>-->
 
   <script src="./map.js"></script>
 
