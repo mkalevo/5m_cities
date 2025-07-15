@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base href="./">
   <meta charset="utf-8" />
   <title>5m Population Cities</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="./assets/logo/markomaps_fav_16.png" type="image/x-icon">
+  <link rel="shortcut icon" href="cities5m/assets/logo/markomaps_fav_16.png" type="image/x-icon">
   <script src="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.js"></script>
   <link href="https://unpkg.com/maplibre-gl@^5.6.1/dist/maplibre-gl.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./modalStyles.css">
+  <link rel="stylesheet" href="cities5m/style.css">
+  <link rel="stylesheet" href="cities5m/modalStyles.css">
 </head>
 <body>
   <div id="header">
@@ -30,31 +29,31 @@
   <div id="navbar">
     <div class="nav-item" id="support" onclick="openModal('supportModal')">
       <div>
-        <img src="./assets/icons/kofi.png" alt="" srcset="">
+        <img src="cities5m/assets/icons/kofi.png" alt="" srcset="">
         <h3>Support</h3>
       </div>
     </div>
     <div class="nav-item" id="info" onclick="openModal('infoModal')">
       <div>
-        <img src="./assets/icons/info.png" alt="" srcset="">
+        <img src="cities5m/assets/icons/info.png" alt="" srcset="">
         <h3>Info</h3>
       </div>
     </div>
     <div class="nav-item" id="ranking_city" onclick="openModal('rankingCityModal')">
       <div>
-        <img src="./assets/icons/ranking.png" alt="" srcset="">
+        <img src="cities5m/assets/icons/ranking.png" alt="" srcset="">
         <h3>By City</h3>
       </div>
     </div>
     <div class="nav-item" id="ranking" onclick="openModal('rankingModal')">
       <div>
-        <img src="./assets/icons/ranking.png" alt="" srcset="">
+        <img src="cities5m/assets/icons/ranking.png" alt="" srcset="">
         <h3>By Country</h3>
       </div>
     </div>
     <div class="nav-item" id="fullscreen" onclick="requestFullScreen()">
       <div>
-          <img src="./assets/icons/full_screen.png" style="height: 30px;" id="fullscreen-icon" alt="Full Screen">
+          <img src="cities5m/assets/icons/full_screen.png" style="height: 30px;" id="fullscreen-icon" alt="Full Screen">
       </div>
     </div>
   </div>
@@ -142,15 +141,15 @@
 
     <!-- Set Worker URL (used for redirecting) -->
     <script>
-      maplibregl.workerUrl = 'https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.worker.js';
+      maplibregl.setWorkerUrl('https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.worker.js');
     </script>
 
-  <script src="./map.js"></script>
+  <script src="cities5m/map.js"></script>
 
   <!-- Util scripts -->
-   <script src="./utils/viewModal.js"></script>
-   <script src="./utils/fullScreen.js"></script>
-   <script src="./utils/countries_ranking.js"></script>
-   <script src="./utils/cities_ranking.js"></script>
+   <script src="cities5m/utils/viewModal.js"></script>
+   <script src="cities5m/utils/fullScreen.js"></script>
+   <script src="cities5m/utils/countries_ranking.js"></script>
+   <script src="cities5m'/utils/cities_ranking.js"></script>
 </body>
 </html>
