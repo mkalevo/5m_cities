@@ -66,19 +66,25 @@
 </head>
 <body>
   <div id="header">
-    <div id="projectionControl">
-      <button id="toggleProjectionBtn" title="Switch projection"></button>
+    <div class="nav-item" id="shareBtn" onclick="handleShareClick()">
+        <img src="./assets/icons/shareIcon_white.png" alt="Share" />
     </div>
     <div id="headerTitle">
       <h1>+5 million per city</h1>
       <h2>(and their growth)</h2>
     </div>
     <div>
-      <p><span style="color:#212121; font-weight: bold;">2025</span></p>
+      <p><span style="color:#b8b8b8; font-weight: bold;">2025</span></p>
     </div>
   </div>
 
-  <div id="map"></div>
+  
+
+  <div id="map">
+    <div id="projectionControl">
+      <button id="toggleProjectionBtn" title="Switch projection"></button>
+    </div>
+  </div>
 
   <div id="navbar">
     <div class="nav-item" id="support" onclick="openModal('supportModal')">
@@ -192,6 +198,33 @@
    </div>
   <!-- RankingModal END -->
 
+  <!-- FALLBACK MODAL FOR SHARING -->
+   <div id="shareModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('shareModal')">&times;</span>
+    <h2>Share:</h2>
+    <div class="share-buttons">
+      <a class="share-icon" href="https://x.com/intent/tweet?url=https%3A%2F%2Fmarkomaps.com%2Fcities5m%2F&text=Explore%2087%20cities%20with%205M%2B%20people%20in%202025!" target="_blank" title="Share on X">
+        <img src="./assets/icons/x-icon-own.png" alt="X" />
+      </a>
+      <a class="share-icon" href="https://www.facebook.com/sharer/sharer.php?u=https://markomaps.com/cities5m/" target="_blank" title="Share on Facebook">
+        <img src="./assets/icons/facebook-icon-own.png" alt="fb" />
+      </a>
+      <a class="share-icon" href="https://www.linkedin.com/shareArticle?mini=true&url=https://markomaps.com/cities5m/&title=Cities%205M%2B%20Map&summary=Explore%2087%20cities%20in%202025" target="_blank" title="Share on LinkedIn">
+        <img src="./assets/icons/linkedin-icon-own.png" alt="in" />
+      </a>
+      <a class="share-icon" href="https://api.whatsapp.com/send?text=Explore%2087%20cities%20with%205M%2B%20people%20in%202025!%20https%3A%2F%2Fmarkomaps.com%2Fcities5m%2F" target="_blank" title="Share on WhatsApp">
+        <img src="./assets/icons/whatsapp-icon-own.png" alt="wa" />
+      </a>
+      <button id="copyLinkBtn" class="share-icon" onclick="copyShareUrl()" title="Copy">
+        <img src="./assets/icons/copy-icon.png" alt="Copy" />
+      </button>
+    </div>
+    <p id="copyFeedback" style="display:none; color: green; font-size: 0.9rem;">Link copied!</p>
+  </div>
+</div>
+  <!-- END FALLBACK MODAL FOR SHARING -->
+
   <script src="./map.js"></script>
 
   <!-- Util scripts -->
@@ -199,5 +232,6 @@
    <script src="./utils/fullScreen.js"></script>
    <script src="./utils/countries_ranking.js"></script>
    <script src="./utils/cities_ranking.js"></script>
+   <script src="./utils/share.js"></script>
 </body>
 </html>

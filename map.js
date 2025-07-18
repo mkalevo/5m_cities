@@ -147,8 +147,8 @@ map.on('load', () => {
         <strong>${flag} ${country}</strong>
       </p>
       <p style="margin: 0 0 4px;">
+        <span style='background-color:rgb(47, 79, 79,0.3); padding:2px; border-radius:2px;'><strong>Population 2025:</strong> ${pop2025}</span><br />
         <strong>Population 2024:</strong> ${pop2024}<br />
-        <strong>Population 2025:</strong> ${pop2025}<br />
         <strong>Growth:</strong> <span style="color:${growthColor}">${growthText}</span> (${growthAmount})
       </p>
     </div>

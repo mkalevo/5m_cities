@@ -19,7 +19,37 @@ body, html {
     align-items: center;
 }
 
+#shareBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0, 0.2);
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0;
+}
 
+#shareBtn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#shareBtn img {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+
+
+#projectionControl {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000; /* Ensure it's above the map */
+}
 
 #toggleProjectionBtn {
   background: #212121;
@@ -30,6 +60,15 @@ body, html {
   font-size: 18px;
   line-height: 1;
   cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+#toggleProjectionBtn:hover {
+  background: #444;
 }
 
 
