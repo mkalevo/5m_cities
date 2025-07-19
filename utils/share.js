@@ -1,6 +1,6 @@
 function handleShareClick() {
   const shareData = {
-    title: "Cities 5M+ — Interactive Population Map 2025",
+    title: "Cities over 5M - Map",
     text: "Explore 87 global cities with 5M+ population and their 2025 growth 📈",
     url: "https://markomaps.com/cities5m/"
   };

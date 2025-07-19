@@ -112,6 +112,10 @@ th.sortable:hover .sort-icon {
   }
 }
 
+#shareModal .modal-content {
+  background-color:#182929;
+}
+
 .share-buttons {
   display: flex;
   flex-direction: column;
@@ -128,7 +132,7 @@ th.sortable:hover .sort-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #f2f2f2;
+  background-color: #2b4747;
   border-radius: 50%;
   transition: background-color 0.3s;
   cursor: pointer;
@@ -142,5 +146,5 @@ th.sortable:hover .sort-icon {
 }
 
 .share-icon:hover {
-  background-color: #dcdcdc;
+  background-color:#111d1d;
 }
